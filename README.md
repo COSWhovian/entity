@@ -1,1 +1,3 @@
 # entity
+#
+# hibernate entities
