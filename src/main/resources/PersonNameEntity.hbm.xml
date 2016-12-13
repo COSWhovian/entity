@@ -1,0 +1,35 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="start.PersonNameEntity" table="person_name" schema="enigmabase">
+        <id column="id" length="36" name="id"/>
+
+
+        <many-to-one name="personId" class="start.PersonEntity" column="person_id"
+                     entity-name="PersonEntity" unique="true" not-null="true"
+                     cascade="all"/>
+
+
+        <property name="nameCd">
+            <column name="name_cd" sql-type="varchar(3)" length="3" not-null="true"/>
+        </property>
+        <property name="prefix">
+            <column name="prefix" sql-type="varchar(50)" length="50" not-null="true"/>
+        </property>
+        <property name="first">
+            <column name="first" sql-type="varchar(100)" length="100" not-null="true"/>
+        </property>
+        <property name="middle">
+            <column name="middle" sql-type="varchar(100)" length="100" not-null="true"/>
+        </property>
+        <property name="last">
+            <column name="last" sql-type="varchar(100)" length="100" not-null="true"/>
+        </property>
+        <property name="suffix">
+            <column name="suffix" sql-type="varchar(50)" length="50" not-null="true"/>
+        </property>
+    </class>
+</hibernate-mapping>
