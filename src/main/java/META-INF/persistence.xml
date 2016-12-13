@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence xmlns="http://java.sun.com/xml/ns/persistence" version="2.0">
+
+    <persistence-unit name="NewPersistenceUnit">
+        <provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
+        <mapping-file>../../resources/PersonEntity.xml</mapping-file>
+        <mapping-file>../../resources/PersonNameEntity.xml</mapping-file>
+        <mapping-file>../../resources/PersonRelativeEntity.xml</mapping-file>
+
+        <mapping-file>../../resources/ProcessControlEntity.xml</mapping-file>
+        <class>start.PersonEntity</class>
+        <class>start.PersonNameEntity</class>
+        <class>start.PersonRelativeEntity</class>
+
+        <class>start.UsableBaseEntity</class>
+
+<class>start.ProcessControlEntity</class>
+
+
+        <properties>
+            <property name="hibernate.connection.url" value="jdbc:mysql://localhost:3306/enigmabase"/>
+            <property name="hibernate.connection.driver_class" value="com.mysql.jdbc.Driver"/>
+            <property name="hibernate.connection.username" value=""/>
+            <property name="hibernate.connection.password" value=""/>
+            <property name="hibernate.archive.autodetection" value="class"/>
+            <property name="hibernate.show_sql" value="true"/>
+            <property name="hibernate.format_sql" value="true"/>
+            <property name="hbm2ddl.auto" value="update"/>
+        </properties>
+    </persistence-unit>
+</persistence>

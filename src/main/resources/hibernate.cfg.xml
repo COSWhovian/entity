@@ -1,0 +1,34 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-configuration PUBLIC
+        "-//Hibernate/Hibernate Configuration DTD//EN"
+        "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+    <session-factory>
+        <property name="connection.url">jdbc:mysql://localhost:3306/enigmabase</property>
+        <property name="connection.driver_class">com.mysql.jdbc.Driver</property>
+        <property name="connection.username">chuck</property>
+        <property name="connection.password">Th3D4rkN3ss</property>
+<property name="show_sql">true</property>
+        <mapping class="start.PersonEntity"/>
+        <!--<mapping resource="PersonEntity.hbm.xml"/>-->
+
+        <!--<mapping resource="PersonNameEntity.hbm.xml"/>-->
+        <mapping class="start.PersonNameEntity"/>
+
+        <!--<mapping resource="PersonRelativeEntity.hbm.xml"/>-->
+        <mapping class="start.PersonRelativeEntity"/>
+
+
+
+        <mapping class="s2.entities.ProjectTypeEntity"/>
+        <mapping class="s2.entities.ProjectEntity"/>
+
+
+
+        <mapping class="s2.entities.NameGroupEntity"/>
+        <mapping class="s2.entities.NameGroupMapEntity"/>
+        <mapping class="start.PersonGroupEntity"/>
+        <!-- DB schema will be updated if needed -->
+        <!-- <property name="hbm2ddl.auto">updateProject</property> -->
+    </session-factory>
+</hibernate-configuration>

@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+    <record>
+        <date>2016-12-11T12:15:50</date>
+        <millis>1481483750299</millis>
+        <sequence>1</sequence>
+        <logger>s2.threading.ThreadedStreamReader</logger>
+        <level>FINE</level>
+        <class>s2.threading.ThreadedStreamReader</class>
+        <method>&lt;init&gt;</method>
+        <thread>1</thread>
+        <message>initialize logging</message>
+    </record>
+    <record>
+        <date>2016-12-11T12:15:50</date>
+        <millis>1481483750299</millis>
+        <sequence>2</sequence>
+        <logger>s2.threading.ThreadedStreamReader</logger>
+        <level>INFO</level>
+        <class>s2.threading.ThreadedStreamReader</class>
+        <method>&lt;init&gt;</method>
+        <thread>1</thread>
+        <message>ThreadedStreamReader -- started</message>
+    </record>
+    <record>
+        <date>2016-12-11T12:15:50</date>
+        <millis>1481483750314</millis>
+        <sequence>3</sequence>
+        <logger>s2.threading.ThreadedStreamReader</logger>
+        <level>FINE</level>
+        <class>s2.threading.ThreadedStreamReader</class>
+        <method>&lt;init&gt;</method>
+        <thread>1</thread>
+        <message>initialize logging</message>
+    </record>
+    <record>
+        <date>2016-12-11T12:15:50</date>
+        <millis>1481483750314</millis>
+        <sequence>4</sequence>
+        <logger>s2.threading.ThreadedStreamReader</logger>
+        <level>INFO</level>
+        <class>s2.threading.ThreadedStreamReader</class>
+        <method>&lt;init&gt;</method>
+        <thread>1</thread>
+        <message>ThreadedStreamReader -- started</message>
+    </record>
+    <record>
+        <date>2016-12-11T12:15:50</date>
+        <millis>1481483750314</millis>
+        <sequence>6</sequence>
+        <logger>s2.threading.ThreadedStreamReader</logger>
+        <level>INFO</level>
+        <class>s2.threading.ThreadedStreamReader</class>
+        <method>run</method>
+        <thread>12</thread>
+        <message>ThreadedStreamReader -- begin reading stream...</message>
+    </record>
+    <record>
+        <date>2016-12-11T12:15:50</date>
+        <millis>1481483750314</millis>
+        <sequence>7</sequence>
+        <logger>s2.threading.ThreadedStreamReader</logger>
+        <level>INFO</level>
+        <class>s2.threading.ThreadedStreamReader</class>
+        <method>run</method>
+        <thread>13</thread>
+        <message>ThreadedStreamReader -- begin reading stream...</message>
+    </record>
+    <record>
+        <date>2016-12-11T12:15:50</date>
+        <millis>1481483750314</millis>
+        <sequence>8</sequence>
+        <logger>s2.threading.ThreadedStreamReader</logger>
+        <level>INFO</level>
+        <class>s2.threading.ThreadedStreamReader</class>
+        <method>run</method>
+        <thread>13</thread>
+        <message>Microsoft Windows [Version 10.0.14393]</message>
+    </record>
+    <record>
+        <date>2016-12-11T12:15:50</date>
+        <millis>1481483750314</millis>
+        <sequence>9</sequence>
+        <logger>s2.threading.ThreadedStreamReader</logger>
+        <level>INFO</level>
+        <class>s2.threading.ThreadedStreamReader</class>
+        <method>run</method>
+        <thread>13</thread>
+        <message>(c) 2016 Microsoft Corporation. All rights reserved.</message>
+    </record>
+    <record>
+        <date>2016-12-11T12:15:50</date>
+        <millis>1481483750314</millis>
+        <sequence>10</sequence>
+        <logger>s2.threading.ThreadedStreamReader</logger>
+        <level>INFO</level>
+        <class>s2.threading.ThreadedStreamReader</class>
+        <method>run</method>
+        <thread>13</thread>
+        <message></message>
+    </record>

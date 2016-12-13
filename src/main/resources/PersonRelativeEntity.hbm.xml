@@ -1,0 +1,19 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="start.PersonRelativeEntity" table="person_relative" schema="enigmabase">
+
+        <id name="id"   length="36"  >
+        </id>
+
+        <property name="personId">
+            <column name="person_id" sql-type="varchar(36)" length="36" not-null="true"/>
+        </property>
+        <property name="relativeCd">
+            <column name="relative_cd" sql-type="varchar(3)" length="3" not-null="true"/>
+        </property>
+    </class>
+</hibernate-mapping>

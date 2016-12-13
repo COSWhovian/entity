@@ -1,0 +1,28 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+	http://www.springframework.org/schema/beans/spring-beans-2.5.xsd
+	http://www.springframework.org/schema/context
+	http://www.springframework.org/schema/context/spring-context-2.5.xsd">
+    <context:annotation-config/>
+    <context:component-scan base-package="s2"/>
+
+
+    <!--<bean id="projectServiceBean" class="s2.service.impl.ProjectService"></bean>-->
+    <!--<bean id="projectTableModel" class="s2.project.ProjectTableModel"></bean>-->
+
+    <!--<bean id="projectFrameBean" class="s2.project.ui.ProjectFrame">-->
+    <!--<property name="title" value="EnigmaWriter Projects" />-->
+    <!--</bean>-->
+
+    <!--<bean id="projectGridPanelBean" class="s2.project.ui.ProjectGridPanel"></bean>-->
+
+
+    <!--<bean id="projectTypeComboBox" class="s2.project.ui.ProjectTypeComboBoxDemo" scope="prototype">-->
+        <!--<constructor-arg type="java.lang.String" value=""></constructor-arg>-->
+    <!--</bean>-->
+    <import resource="classpath:spring-jdbc.xml" />
+
+
+</beans>
