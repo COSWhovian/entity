@@ -1,3 +1,4 @@
 # entity
 #
 # hibernate entities
+# initial
