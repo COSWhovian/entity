@@ -4,11 +4,11 @@
         "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
 <hibernate-mapping>
 
-    <class name="start.PersonNameEntity" table="person_name" schema="enigmabase">
+    <class name="s2.entities.person.PersonNameEntity" table="person_name" schema="enigmabase">
         <id column="id" length="36" name="id"/>
 
 
-        <many-to-one name="personId" class="start.PersonEntity" column="person_id"
+        <many-to-one name="personId" class="s2.entities.person.PersonEntity" column="person_id"
                      entity-name="PersonEntity" unique="true" not-null="true"
                      cascade="all"/>
 

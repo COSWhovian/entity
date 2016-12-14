@@ -4,7 +4,7 @@
     "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
 <hibernate-mapping>
 
-    <class name="start.PersonRelativeEntity" table="person_relative" schema="enigmabase">
+    <class name="s2.entities.person.PersonRelativeEntity" table="person_relative" schema="enigmabase">
 
         <id name="id"   length="36"  >
         </id>

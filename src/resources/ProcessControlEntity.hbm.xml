@@ -4,7 +4,7 @@
         "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
 <hibernate-mapping>
 
-    <class name="start.ProcessControlEntity" table="process_control" schema="enigmabase">
+    <class name="s2.entities.process.ProcessControlEntity" table="process_control" schema="enigmabase">
         <id name="id">
             <column name="id" sql-type="varchar(36)" length="36"/>
         </id>

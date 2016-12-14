@@ -9,27 +9,27 @@
         <property name="connection.username">chuck</property>
         <property name="connection.password">Th3D4rkN3ss</property>
 <property name="show_sql">true</property>
-        <mapping class="start.PersonEntity"/>
+        <mapping class="s2.entities.person.PersonEntity"/>
         <!--<mapping resource="PersonEntity.hbm.xml"/>-->
         <mapping class="start.UsableBaseEntity" />
-        <mapping class="start.ProcessControlEntity" />
+        <mapping class="s2.entities.process.ProcessControlEntity" />
         <!--<mapping resource="PersonNameEntity.hbm.xml"/>-->
-        <mapping class="start.PersonNameEntity"/>
+        <mapping class="s2.entities.person.PersonNameEntity"/>
 
-        <mapping class="s2.entities.ProjectTypeEntity"/>
-        <mapping class="s2.entities.ProjectEntity"/>
+        <mapping class="s2.entities.project.ProjectTypeEntity"/>
+        <mapping class="s2.entities.project.ProjectEntity"/>
 
 
 
 
         <!--<mapping resource="PersonRelativeEntity.hbm.xml"/>-->
-        <mapping class="start.PersonRelativeEntity"/>
+        <mapping class="s2.entities.person.PersonRelativeEntity"/>
 
 
 
-        <mapping class="s2.entities.NameGroupEntity"/>
-        <mapping class="s2.entities.NameGroupMapEntity"/>
-        <mapping class="start.PersonGroupEntity"/>
+        <mapping class="s2.entities.name.NameGroupEntity"/>
+        <mapping class="s2.entities.name.NameGroupMapEntity"/>
+        <mapping class="s2.entities.person.PersonGroupEntity"/>
         <!-- DB schema will be updated if needed -->
         <!-- <property name="hbm2ddl.auto">updateProject</property> -->
     </session-factory>

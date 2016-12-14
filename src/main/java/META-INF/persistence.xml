@@ -1,27 +1,32 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <persistence xmlns="http://java.sun.com/xml/ns/persistence" version="2.0">
 
-    <persistence-unit name="NewPersistenceUnit">
-        <provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
-        <mapping-file>../../resources/PersonEntity.xml</mapping-file>
-        <mapping-file>../../resources/PersonNameEntity.xml</mapping-file>
-        <mapping-file>../../resources/PersonRelativeEntity.xml</mapping-file>
+    <persistence-unit name="manager1">
+        <!--<jta-data-source>java:/MySQL - enigmabase@localhost</jta-data-source>-->
 
-        <mapping-file>../../resources/ProcessControlEntity.xml</mapping-file>
-        <class>start.PersonEntity</class>
-        <class>start.PersonNameEntity</class>
-        <class>start.PersonRelativeEntity</class>
 
-        <class>start.UsableBaseEntity</class>
+        <!--<provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>-->
 
-<class>start.ProcessControlEntity</class>
+        <class>s2.entities.person.PersonEntity</class>
+        <class>s2.entities.person.PersonGroupEntity</class>
 
+        <class>s2.entities.person.PersonNameEntity</class>
+        <class>s2.entities.person.PersonContactEntity</class>
+        <class>s2.entities.person.PersonRelativeEntity</class>
+
+        <class>s2.entities.project.ProjectTypeEntity</class>
+        <class>s2.entities.project.ProjectEntity</class>
+
+
+        <!--<class>start.UsableBaseEntity</class>-->
+        <class>s2.entities.name.NameGroupEntity</class>
+        <class>s2.entities.name.NameGroupMapEntity</class>
 
         <properties>
             <property name="hibernate.connection.url" value="jdbc:mysql://localhost:3306/enigmabase"/>
             <property name="hibernate.connection.driver_class" value="com.mysql.jdbc.Driver"/>
-            <property name="hibernate.connection.username" value=""/>
-            <property name="hibernate.connection.password" value=""/>
+            <property name="hibernate.connection.username" value="chuck"/>
+            <property name="hibernate.connection.password" value="Th3D4rkN3ss"/>
             <property name="hibernate.archive.autodetection" value="class"/>
             <property name="hibernate.show_sql" value="true"/>
             <property name="hibernate.format_sql" value="true"/>

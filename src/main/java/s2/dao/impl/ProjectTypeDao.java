@@ -3,7 +3,7 @@ package s2.dao.impl;
 import org.springframework.stereotype.Component;
 import s2.dao.AbstractEntityDao;
 import s2.dao.EntityDao;
-import s2.entities.ProjectTypeEntity;
+import s2.entities.project.ProjectTypeEntity;
 
 /**
  * Created by russl on 11/27/2016.
