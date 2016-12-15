@@ -1,178 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="2f827153-e5ac-4be9-bafb-92bd4f45d78f" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dog.iml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/s2/entities/person/PersonContactEntity.java" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_3_2_0_M1.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/components/ButtonDemo.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/components/ButtonHtmlDemo.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/components/CheckBoxDemo.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/components/ColorChooserDemo.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/components/ColorChooserDemo2.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/components/CrayonPanel.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/components/FormattedTextFieldDemo.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/components/PersonEditor.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/components/TopLevelDemo.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/components/images/blue.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/components/images/geek/geek-----.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/components/images/geek/geek----t.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/components/images/geek/geek---h-.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/components/images/geek/geek---ht.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/components/images/geek/geek--g--.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/components/images/geek/geek--g-t.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/components/images/geek/geek--gh-.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/components/images/geek/geek--ght.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/components/images/geek/geek-c---.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/components/images/geek/geek-c--t.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/components/images/geek/geek-c-h-.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/components/images/geek/geek-c-ht.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/components/images/geek/geek-cg--.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/components/images/geek/geek-cg-t.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/components/images/geek/geek-cgh-.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/components/images/geek/geek-cght.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/components/images/green.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/components/images/left.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/components/images/red.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/components/images/right.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/components/images/yellow.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/s2/BoxLayoutDemo.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/s2/ButtonDemo.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/s2/IntegerEditor.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/s2/PersonDemo.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/s2/ProjectDemo.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/s2/SimpleTableDemo.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/s2/TabDemo.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/s2/TableDemo.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/s2/TableFTFEditDemo.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/s2/TablePrintDemo.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/s2/TableRenderDemo.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/s2/TableSelectionDemo.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/s2/TableSortDemo.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/s2/common/ChangeHandler.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/s2/common/ControlPanel.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/s2/common/ControlPanelActionListener.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/s2/common/Disposer.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/s2/control/HomeController.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/s2/control/ProjectController.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/s2/hello/Application.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/s2/hello/ComboBoxDemo.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/s2/hello/ComboBoxDemo2.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/s2/hello/CousinSimple.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/s2/hello/CustomComboBoxDemo.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/s2/hello/Email.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/s2/hello/Example.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/s2/hello/McsApplication.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/s2/hello/MemoryAlpha.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/s2/hello/ProjectTypeComboBoxDemo2.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/s2/hello/Receiver.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/s2/hello/VisitorExample.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/s2/hello/scratch.sql" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/s2/name/NameGroupData.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/s2/name/NameGroupGridPanel.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/s2/name/NameGroupTableModel.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/s2/person/PersonData.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/s2/person/PersonGridPanel.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/s2/person/PersonNameData.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/s2/person/PersonNameDataComparator.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/s2/person/PersonNameEditPanel.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/s2/person/PersonNameGridPanel.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/s2/person/PersonNameTableModel.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/s2/person/PersonTableModel.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/s2/project/AbstractControlledPanel.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/s2/project/AbstractControllerPanel.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/s2/project/AbstractProjectDetailGridPanel.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/s2/project/ControlledPanel.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/s2/project/ControllerPanel.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/s2/project/NeoProjectDemo.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/s2/project/ObservableProjectData.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/s2/project/ProjectData.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/s2/project/ProjectTableModel.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/s2/project/ui/AbstractProjectAddEditPanel.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/s2/project/ui/AbstractProjectFormPanel.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/s2/project/ui/DefaultProjectDetailComposer.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/s2/project/ui/ProjectAddPanel.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/s2/project/ui/ProjectDetailComposer.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/s2/project/ui/ProjectDetailComposerFactory.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/s2/project/ui/ProjectDetailGridPanel.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/s2/project/ui/ProjectEditPanel.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/s2/project/ui/ProjectFrame.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/s2/project/ui/ProjectGridPanel.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/s2/project/ui/ProjectPanel.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/s2/project/ui/ProjectTypeComboBoxDemo.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/s2/project/ui/TvSeriesProjectDetailComposer.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/s2/serial/NotSerializableExceptionExample.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/s2/serial/Pair.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/s2/serial/Serializer.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/s2/serial/Some.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/s2/service/impl/ProjectService.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/s2/service/impl/ProjectTypeService.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/s2/threading/CmdExecDemo1.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/s2/threading/CommandExecutor.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/s2/threading/Consumer.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/s2/threading/Consumer2.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/s2/threading/DefaultStreamWatcher.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/s2/threading/ExecutionException.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/s2/threading/Producer.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/s2/threading/Producer2.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/s2/threading/ProducerConsumerExampleWithWaitAndNotify.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/s2/threading/ProducerConsumerExampleWithWaitAndNotify2.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/s2/threading/StreamWatcher.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/s2/threading/ThreadedStreamReader.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/s2/threading/junk.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/start/ColorEditor.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/start/ColorRenderer.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/start/HelloWorldSwing.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/start/ModalityDemo.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/start/PersonEditor.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/start/TableDemo2.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/start/TableDialogEditDemo.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/start/TableFilterDemo.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/Files-View-File-icon.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/Updates Downloading updates.ico" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/add.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/edit.ico" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/images (1).png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/images.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/pencil_and_paper-512.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/refresh-update_318-27631.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/resources/Files-View-File-icon.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/resources/Updates Downloading updates.ico" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/resources/add.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/resources/edit.ico" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/resources/edit.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/resources/images.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/resources/pencil_and_paper-512.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/resources/refresh-update_318-27631.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/resources/trash.png" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/s2/entities/NameGroupEntity.java" afterPath="$PROJECT_DIR$/src/main/java/s2/entities/name/NameGroupEntity.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/s2/entities/NameGroupMapEntity.java" afterPath="$PROJECT_DIR$/src/main/java/s2/entities/name/NameGroupMapEntity.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/s2/entities/ProjectEntity.java" afterPath="$PROJECT_DIR$/src/main/java/s2/entities/project/ProjectEntity.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/s2/entities/ProjectTypeEntity.java" afterPath="$PROJECT_DIR$/src/main/java/s2/entities/project/ProjectTypeEntity.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/start/PersonEntity.java" afterPath="$PROJECT_DIR$/src/main/java/s2/entities/person/PersonEntity.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/start/PersonGroupEntity.java" afterPath="$PROJECT_DIR$/src/main/java/s2/entities/person/PersonGroupEntity.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/start/PersonGroupMapEntity.java" afterPath="$PROJECT_DIR$/src/main/java/s2/entities/person/PersonGroupMapEntity.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/start/PersonNameEntity.java" afterPath="$PROJECT_DIR$/src/main/java/s2/entities/person/PersonNameEntity.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/start/PersonRelativeEntity.java" afterPath="$PROJECT_DIR$/src/main/java/s2/entities/person/PersonRelativeEntity.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/start/ProcessControlEntity.java" afterPath="$PROJECT_DIR$/src/main/java/s2/entities/process/ProcessControlEntity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources/cbbf2e6b-852c-4cea-a217-d27baa448a2a.xml" afterPath="$PROJECT_DIR$/.idea/dataSources/cbbf2e6b-852c-4cea-a217-d27baa448a2a.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pom.xml" afterPath="$PROJECT_DIR$/pom.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/META-INF/persistence.xml" afterPath="$PROJECT_DIR$/src/main/java/META-INF/persistence.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/Main.java" afterPath="$PROJECT_DIR$/src/main/java/Main.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/s2/dao/impl/ProjectDao.java" afterPath="$PROJECT_DIR$/src/main/java/s2/dao/impl/ProjectDao.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/s2/dao/impl/ProjectTypeDao.java" afterPath="$PROJECT_DIR$/src/main/java/s2/dao/impl/ProjectTypeDao.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/PersonEntity.hbm.xml" afterPath="$PROJECT_DIR$/src/main/resources/PersonEntity.hbm.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/PersonNameEntity.hbm.xml" afterPath="$PROJECT_DIR$/src/main/resources/PersonNameEntity.hbm.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/PersonRelativeEntity.hbm.xml" afterPath="$PROJECT_DIR$/src/main/resources/PersonRelativeEntity.hbm.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/hibernate.cfg.xml" afterPath="$PROJECT_DIR$/src/main/resources/hibernate.cfg.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/resources/PersonEntity.hbm.xml" afterPath="$PROJECT_DIR$/src/resources/PersonEntity.hbm.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/resources/PersonNameEntity.hbm.xml" afterPath="$PROJECT_DIR$/src/resources/PersonNameEntity.hbm.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/resources/PersonRelativeEntity.hbm.xml" afterPath="$PROJECT_DIR$/src/resources/PersonRelativeEntity.hbm.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/resources/ProcessControlEntity.hbm.xml" afterPath="$PROJECT_DIR$/src/resources/ProcessControlEntity.hbm.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/resources/hibernate.cfg.xml" afterPath="$PROJECT_DIR$/src/resources/hibernate.cfg.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/swing1.iml" afterPath="$PROJECT_DIR$/swing1.iml" />
-    </list>
+    <list default="true" id="2f827153-e5ac-4be9-bafb-92bd4f45d78f" name="Default" comment="" />
     <ignored path="swing1.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path="$PROJECT_DIR$/out/" />
@@ -255,7 +84,9 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="198">
               <caret line="15" column="13" lean-forward="false" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
-              <folding />
+              <folding>
+                <element signature="imports" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -265,7 +96,14 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="233">
               <caret line="191" column="20" lean-forward="false" selection-start-line="188" selection-start-column="19" selection-end-line="191" selection-end-column="20" />
-              <folding />
+              <folding>
+                <marker date="1481706657420" expanded="true" signature="89:7637" ph="..." />
+                <marker date="1481706657420" expanded="true" signature="629:1507" ph="..." />
+                <marker date="1481706657420" expanded="true" signature="1605:6545" ph="..." />
+                <marker date="1481706657420" expanded="true" signature="6559:7625" ph="..." />
+                <marker date="1481706657420" expanded="true" signature="6577:7109" ph="..." />
+                <marker date="1481706657420" expanded="true" signature="7129:7612" ph="..." />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -295,9 +133,7 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="255">
               <caret line="43" column="27" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="69" selection-end-column="1" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+              <folding />
             </state>
           </provider>
         </entry>
@@ -446,9 +282,10 @@
     </treeState>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="477" />
-    <option name="width" value="1451" />
-    <option name="height" value="1038" />
+    <option name="x" value="2391" />
+    <option name="y" value="206" />
+    <option name="width" value="1818" />
+    <option name="height" value="1093" />
   </component>
   <component name="ProjectView">
     <navigator currentView="ProjectPane" proportions="" version="1">
@@ -1464,7 +1301,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="477" y="0" width="1451" height="1038" extended-state="0" />
+    <frame x="2391" y="206" width="1818" height="1093" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
@@ -1475,7 +1312,7 @@
       <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.29163638" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23019518" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24978466" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -1491,7 +1328,7 @@
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32909605" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Persistence" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.17192833" sideWeight="0.34488735" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.328" sideWeight="0.6551126" order="7" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2588978" sideWeight="0.6551126" order="7" side_tool="false" content_ui="combo" />
       <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32977816" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="true" content_ui="tabs" />
@@ -1778,9 +1615,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
           <caret line="43" column="27" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="69" selection-end-column="1" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1804,7 +1639,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="233">
           <caret line="191" column="20" lean-forward="false" selection-start-line="188" selection-start-column="19" selection-end-line="191" selection-end-column="20" />
-          <folding />
+          <folding>
+            <marker date="1481706657420" expanded="true" signature="89:7637" ph="..." />
+            <marker date="1481706657420" expanded="true" signature="629:1507" ph="..." />
+            <marker date="1481706657420" expanded="true" signature="1605:6545" ph="..." />
+            <marker date="1481706657420" expanded="true" signature="6559:7625" ph="..." />
+            <marker date="1481706657420" expanded="true" signature="6577:7109" ph="..." />
+            <marker date="1481706657420" expanded="true" signature="7129:7612" ph="..." />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1812,7 +1654,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="198">
           <caret line="15" column="13" lean-forward="false" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
-          <folding />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
