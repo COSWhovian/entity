@@ -6,8 +6,8 @@ import org.hibernate.annotations.GenericGenerator;
 import javax.persistence.*;
 
 @Entity
-@Table(name="COURSE")
-public class VCourseEntity {
+@Table(name="video_rating")
+public class VideoRatingEntity {
 
     private String ratingId;
     private String ratingName;
@@ -16,10 +16,10 @@ public class VCourseEntity {
     private String courseDesc;
     private String courseTip;
 
-    public VCourseEntity() {
+    public VideoRatingEntity() {
     }
 
-    public VCourseEntity(String ratingName) {
+    public VideoRatingEntity(String ratingName) {
         this.ratingName = ratingName;
     }
 
@@ -27,7 +27,7 @@ public class VCourseEntity {
     @GeneratedValue(generator = "uuid")
     @GenericGenerator(name = "uuid", strategy = "org.hibernate.id.UUIDGenerator")
     @Id
-    @Column(name = "COURSE_ID", unique = true, nullable = false, length = 36)
+    @Column(name = "rating_id", unique = true, nullable = false, length = 36)
     public String getRatingId() {
         return this.ratingId;
     }
