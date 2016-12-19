@@ -3,6 +3,7 @@ package s2.entities.person;
 import org.hibernate.annotations.GenericGenerator;
 
 import javax.persistence.*;
+import java.util.Objects;
 
 /**
  * Created by russl on 11/14/2016.
@@ -160,56 +161,50 @@ public class PersonNameEntity {
         this.alternate = alternate;
     }
 
-//    @Override
-//    public String toString() {
-//        return "PersonNameEntity{" + "id='" + id + '\'' + ", nameCd='" + nameCd + '\'' + ", prefix='" + prefix + '\''
-//                + ", first='" + first + '\'' + ", middle='" + middle + '\'' + ", last='" + last + '\'' + ", suffix='"
-//                + suffix + '\'' + ", alternate='" + alternate + '\'' + ", personId=" + personId + '}';
-//    }
-
     @Override
     public String toString() {
-        return "PersonNameEntity{" + "id='" + id + '\'' + ", nameCd='" + nameCd + '\'' + ", title='" + title + '\'' +
-                ", prefix='" + prefix + '\'' + ", first='" + first + '\'' + ", middle='" + middle + '\'' + ", last='"
-                + last + '\'' + ", suffix='" + suffix + '\'' + ", nameDesc='" + nameDesc + '\'' + ", alternate='" +
-                alternate + '\'' + ", personId=" + personId + '}';
+        final StringBuilder sb = new StringBuilder("PersonNameEntity{");
+        sb.append("id='").append(id).append('\'');
+        sb.append(", nameCd='").append(nameCd).append('\'');
+        sb.append(", title='").append(title).append('\'');
+        sb.append(", prefix='").append(prefix).append('\'');
+        sb.append(", first='").append(first).append('\'');
+        sb.append(", middle='").append(middle).append('\'');
+        sb.append(", last='").append(last).append('\'');
+        sb.append(", suffix='").append(suffix).append('\'');
+        sb.append(", nameDesc='").append(nameDesc).append('\'');
+        sb.append(", alternate='").append(alternate).append('\'');
+        sb.append(", personId=").append(personId);
+        sb.append('}');
+        return sb.toString();
     }
 
     @Override
     public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-
+        if (this == o) {
+            return true;
+        }
+        if (o == null || getClass() != o.getClass()) {
+            return false;
+        }
         PersonNameEntity that = (PersonNameEntity) o;
-
-        if (!id.equals(that.id)) return false;
-        if (!nameCd.equals(that.nameCd)) return false;
-        if (prefix != null ? !prefix.equals(that.prefix) : that.prefix != null) return false;
-        if (first != null ? !first.equals(that.first) : that.first != null) return false;
-        if (middle != null ? !middle.equals(that.middle) : that.middle != null) return false;
-        if (last != null ? !last.equals(that.last) : that.last != null) return false;
-        if (suffix != null ? !suffix.equals(that.suffix) : that.suffix != null) return false;
-        if (alternate != null ? !alternate.equals(that.alternate) : that.alternate != null) return false;
-        return personId.equals(that.personId);
+        return Objects.equals(id, that.id) &&
+                Objects.equals(nameCd, that.nameCd) &&
+                Objects.equals(title, that.title) &&
+                Objects.equals(prefix, that.prefix) &&
+                Objects.equals(first, that.first) &&
+                Objects.equals(middle, that.middle) &&
+                Objects.equals(last, that.last) &&
+                Objects.equals(suffix, that.suffix) &&
+                Objects.equals(nameDesc, that.nameDesc) &&
+                Objects.equals(alternate, that.alternate) &&
+                Objects.equals(personId, that.personId);
     }
 
     @Override
     public int hashCode() {
-        int result = (id == null) ? 0 : id.hashCode();
-        result = 31 * result + nameCd.hashCode();
-        result = 31 * result + (prefix != null ? prefix.hashCode() : 0);
-        result = 31 * result + (first != null ? first.hashCode() : 0);
-        result = 31 * result + (middle != null ? middle.hashCode() : 0);
-        result = 31 * result + (last != null ? last.hashCode() : 0);
-        result = 31 * result + (suffix != null ? suffix.hashCode() : 0);
-        result = 31 * result + (alternate != null ? alternate.hashCode() : 0);
-        result = 31 * result + (title != null ? title.hashCode() : 0);
-        result = 31 * result + (nameDesc != null ? nameDesc.hashCode() : 0);
-
-
-        if (personId != null) {
-            result = 31 * result + personId.hashCode();
-        }
-        return result;
+        return Objects.hash(id, nameCd, title, prefix, first, middle, last, suffix, nameDesc, alternate, personId);
     }
+
+
 }

@@ -1,21 +1,19 @@
 package s2.entities.person;
 
 import javax.persistence.*;
+import java.util.Objects;
 
 /**
  * Created by russl on 11/14/2016.
  */
 @Entity
-@Table(name = "person_group_map", schema = "enigmabase" )
+@Table(name = "person_group_map", schema = "enigmabase")
 public class PersonGroupMapEntity {
 
     private String id;
     //
     PersonGroupEntity personGroupEntity;
     PersonEntity personEntity;
-
-
-
 
 
     @Id
@@ -39,53 +37,22 @@ public class PersonGroupMapEntity {
         this.personEntity = personEntity;
     }
 
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) {
+            return true;
+        }
+        if (o == null || getClass() != o.getClass()) {
+            return false;
+        }
+        PersonGroupMapEntity that = (PersonGroupMapEntity) o;
+        return Objects.equals(id, that.id) &&
+                Objects.equals(personGroupEntity, that.personGroupEntity) &&
+                Objects.equals(personEntity, that.personEntity);
+    }
 
-
-//
-//    @Override
-//    public String toString() {
-//        return "PersonNameEntity{" +
-//                "id='" + id + '\'' +
-//                ", nameCd='" + nameCd + '\'' +
-//                ", prefix='" + prefix + '\'' +
-//                ", first='" + first + '\'' +
-//                ", middle='" + middle + '\'' +
-//                ", last='" + last + '\'' +
-//                ", suffix='" + suffix + '\'' +
-//                ", alternate='" + alternate + '\'' +
-//                ", personId=" + personId +
-//                '}';
-//    }
-
-//    @Override
-//    public boolean equals(Object o) {
-//        if (this == o) return true;
-//        if (o == null || getClass() != o.getClass()) return false;
-//
-//        PersonGroupMapEntity that = (PersonGroupMapEntity) o;
-//
-//        if (!id.equals(that.id)) return false;
-//        if (!nameCd.equals(that.nameCd)) return false;
-//        if (prefix != null ? !prefix.equals(that.prefix) : that.prefix != null) return false;
-//        if (first != null ? !first.equals(that.first) : that.first != null) return false;
-//        if (middle != null ? !middle.equals(that.middle) : that.middle != null) return false;
-//        if (last != null ? !last.equals(that.last) : that.last != null) return false;
-//        if (suffix != null ? !suffix.equals(that.suffix) : that.suffix != null) return false;
-//        if (alternate != null ? !alternate.equals(that.alternate) : that.alternate != null) return false;
-//        return personId.equals(that.personId);
-//    }
-
-//    @Override
-//    public int hashCode() {
-//        int result = id.hashCode();
-//        result = 31 * result + nameCd.hashCode();
-//        result = 31 * result + (prefix != null ? prefix.hashCode() : 0);
-//        result = 31 * result + (first != null ? first.hashCode() : 0);
-//        result = 31 * result + (middle != null ? middle.hashCode() : 0);
-//        result = 31 * result + (last != null ? last.hashCode() : 0);
-//        result = 31 * result + (suffix != null ? suffix.hashCode() : 0);
-//        result = 31 * result + (alternate != null ? alternate.hashCode() : 0);
-//        result = 31 * result + personId.hashCode();
-//        return result;
-//    }
+    @Override
+    public int hashCode() {
+        return Objects.hash(id, personGroupEntity, personEntity);
+    }
 }

@@ -1,4 +1,4 @@
-package s2.entities.name;
+package s2.entities.person;
 
 /**
  * Created by russl on 11/18/2016.

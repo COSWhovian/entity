@@ -1,7 +1,6 @@
 package s2.entities.person;
 
 import org.hibernate.annotations.GenericGenerator;
-import s2.entities.name.NameGroupEntity;
 
 import javax.persistence.*;
 import java.util.HashSet;
@@ -22,7 +21,7 @@ public class PersonGroupEntity {
     private Set<NameGroupEntity> nameGroupEntities = new HashSet<>();
 
     @GeneratedValue(generator = "uuid")
-    @GenericGenerator(name="uuid", strategy = "org.hibernate.id.UUIDGenerator")
+    @GenericGenerator(name = "uuid", strategy = "org.hibernate.id.UUIDGenerator")
     @Id
     @Column(name = "id", unique = true, nullable = false, length = 36)
     public String getId() {
@@ -43,7 +42,6 @@ public class PersonGroupEntity {
     public void setGroupDesc(String groupDesc) {
         this.groupDesc = groupDesc;
     }
-
 
 
     @Basic
@@ -71,34 +69,44 @@ public class PersonGroupEntity {
     public Set<NameGroupEntity> getNameGroupEntities() {
         return this.nameGroupEntities;
     }
+
     public void setNameGroupEntities(Set<NameGroupEntity> nameGroupEntities) {
         this.nameGroupEntities = nameGroupEntities;
     }
 
     @Override
     public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
+        if (this == o) {
+            return true;
+        }
+        if (o == null || getClass() != o.getClass()) {
+            return false;
+        }
 
         PersonGroupEntity that = (PersonGroupEntity) o;
 
-        if (!id.equals(that.id)) return false;
-        if (groupDesc != null ? !groupDesc.equals(that.groupDesc) : that.groupDesc != null) return false;
+        if (!id.equals(that.id)) {
+            return false;
+        }
+        if (groupDesc != null ? !groupDesc.equals(that.groupDesc) : that.groupDesc != null) {
+            return false;
+        }
         return groupName.equals(that.groupName);
     }
 
     @Override
     public String toString() {
         return "PersonGroupEntity{" +
-                "id='" + (id == null ? "":id) + '\'' +
+                "id='" + (id == null ? "" : id) + '\'' +
                 ", groupDesc='" + groupDesc + '\'' +
                 ", groupName='" + groupName + '\'' +
                 ", nameGroupEntities=" + nameGroupEntities +
                 '}';
     }
+
     @Override
     public int hashCode() {
-        int result = (id == null) ? 0:id.hashCode();
+        int result = (id == null) ? 0 : id.hashCode();
         result = 31 * result + (groupDesc != null ? groupDesc.hashCode() : 0);
         result = 31 * result + groupName.hashCode();
         return result;

@@ -17,10 +17,11 @@
         <class>s2.entities.project.ProjectTypeEntity</class>
         <class>s2.entities.project.ProjectEntity</class>
 
+        <class>s2.entities.video.VideoItemEntity</class>
 
-        <!--<class>start.UsableBaseEntity</class>-->
-        <class>s2.entities.name.NameGroupEntity</class>
-        <class>s2.entities.name.NameGroupMapEntity</class>
+        <!--<class>s2.entities.common.UsableBaseEntity</class>-->
+        <class>s2.entities.person.NameGroupEntity</class>
+        <class>s2.entities.person.NameGroupMapEntity</class>
 
         <properties>
             <property name="hibernate.connection.url" value="jdbc:mysql://localhost:3306/enigmabase"/>

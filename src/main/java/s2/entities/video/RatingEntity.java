@@ -1,4 +1,4 @@
-package s2.entities.name;
+package s2.entities.video;
 
 import org.hibernate.annotations.GenericGenerator;
 import s2.entities.person.PersonGroupEntity;
@@ -8,16 +8,17 @@ import java.util.HashSet;
 import java.util.Set;
 
 /**
- * Created by russl on 11/18/2016.
+ * Created by russl on 12/14/2016.
  */
 
 
 @Entity
 @Table(name = "name_group", schema = "enigmabase")
-public class NameGroupEntity {
+public class RatingEntity  {
+
     private String id;
-    private String groupName;
-    private String groupDesc;
+//    private String groupName;
+//    private String groupDesc;
 
 
     private Set<PersonGroupEntity> personGroupEntities = new HashSet<>();
@@ -34,26 +35,26 @@ public class NameGroupEntity {
         this.id = id;
     }
 
-    @Basic
-    @Column(name = "group_name", nullable = false, length = 100)
-    public String getGroupName() {
-        return groupName;
-    }
+//    @Basic
+//    @Column(name = "group_name", nullable = false, length = 100)
+//    public String getGroupName() {
+//        return groupName;
+//    }
+//
+//    public void setGroupName(String groupName) {
+//        this.groupName = groupName;
+//    }
 
-    public void setGroupName(String groupName) {
-        this.groupName = groupName;
-    }
 
-
-    @Basic
-    @Column(name = "group_desc", nullable = false, length = 256)
-    public String getGroupDesc() {
-        return groupDesc;
-    }
-
-    public void setGroupDesc(String groupDesc) {
-        this.groupDesc = groupDesc;
-    }
+//    @Basic
+//    @Column(name = "group_desc", nullable = false, length = 256)
+//    public String getGroupDesc() {
+//        return groupDesc;
+//    }
+//
+//    public void setGroupDesc(String groupDesc) {
+//        this.groupDesc = groupDesc;
+//    }
 
 
     @ManyToMany(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
@@ -72,9 +73,9 @@ public class NameGroupEntity {
     public String toString() {
         return "NameGroupEntity{" +
                 "id='" + (id == null ? "" : id) + '\'' +
-                ", groupName='" + groupName + '\'' +
-                ", groupDesc='" + groupDesc + '\'' +
-//                ", personGroupEntities=" + personGroupEntities +
+//                ", groupName='" + groupName + '\'' +
+//                ", groupDesc='" + groupDesc + '\'' +
+
                 '}';
     }
 }

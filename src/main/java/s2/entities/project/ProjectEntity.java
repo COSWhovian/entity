@@ -2,7 +2,7 @@ package s2.entities.project;
 
 import org.hibernate.annotations.Cascade;
 import org.hibernate.annotations.GenericGenerator;
-import s2.entities.name.NameGroupEntity;
+import s2.entities.person.NameGroupEntity;
 
 import javax.persistence.*;
 import java.time.LocalDateTime;
@@ -27,7 +27,8 @@ public class ProjectEntity {
 
     private Set<NameGroupEntity> nameGroupEntities = new HashSet<>();
 
-    private ProjectTypeEntity projectType ;
+    private ProjectTypeEntity projectType;
+
     public ProjectEntity(String id, String projectName, String projectDesc,
                          String projectType,
                          String createdBy) {
@@ -35,11 +36,11 @@ public class ProjectEntity {
         this.projectName = projectName;
         this.projectDesc = projectDesc;
 
-//        this.projectTypeCd = projectTypeCd;
         this.createdBy = createdBy;
 
         this.createDt = LocalDateTime.now();
     }
+
     public ProjectEntity(String id, String projectName, String projectDesc,
                          ProjectTypeEntity projectTypeEntity,
                          String createdBy) {
@@ -47,28 +48,28 @@ public class ProjectEntity {
         this.projectName = projectName;
         this.projectDesc = projectDesc;
         this.projectType = projectTypeEntity;
-//        this.projectTypeCd = projectTypeCd;
+
         this.createdBy = createdBy;
 
         this.createDt = LocalDateTime.now();
     }
+
     public ProjectEntity(String projectName, String projectDesc,
                          ProjectTypeEntity projectTypeEntity,
                          String createdBy) {
         this.projectName = projectName;
         this.projectDesc = projectDesc;
         this.projectType = projectTypeEntity;
-//        this.projectTypeCd = projectTypeCd;
+
         this.createdBy = createdBy;
 
         this.createDt = LocalDateTime.now();
     }
+
     public ProjectEntity() {
 
     }
-//    public ProjectEntity( String projectCd, String projectName, String projectDesc, String createdBy) {
-//        this.
-//    }
+
 
     @GeneratedValue(generator = "uuid")
     @GenericGenerator(name = "uuid", strategy = "org.hibernate.id.UUIDGenerator")
@@ -103,40 +104,6 @@ public class ProjectEntity {
         this.projectDesc = projectDesc;
     }
 
-//    @Basic
-//    @Column(name = "project_type_cd", nullable = false, length = 3)
-//    public String getProjectTypeCd() {
-//        return projectTypeCd;
-//    }
-
-//    public void setProjectTypeCd(String projectCd) {
-//        this.projectTypeCd = projectCd;
-//    }
-
-//    @Column(name = "create_dt", nullable = false)
-//    @Type(type = "timestamp")
-//    public Timestamp getCreateDt() {
-//        return createDt;
-//    }
-
-    @Column(name = "create_dt", nullable = false)
-    public LocalDateTime getCreateDt() {
-        return createDt;
-    }
-
-    public void setCreateDt(LocalDateTime createDt) {
-        this.createDt = createDt;
-    }
-
-    @Basic
-    @Column(name = "created_by", nullable = false, length = 40)
-    public String getCreatedBy() {
-        return createdBy;
-    }
-
-    public void setCreatedBy(String createdBy) {
-        this.createdBy = createdBy;
-    }
 
     @ManyToMany(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
     @JoinTable(name = "project_name_group_map",
@@ -152,9 +119,9 @@ public class ProjectEntity {
         this.nameGroupEntities = nameGroupEntities;
     }
 
-    @ManyToOne(  fetch = FetchType.EAGER)
+    @ManyToOne(fetch = FetchType.EAGER)
     @Cascade(org.hibernate.annotations.CascadeType.SAVE_UPDATE)
-    @JoinColumn(name="project_type_id")
+    @JoinColumn(name = "project_type_id")
     public ProjectTypeEntity getProjectType() {
         return projectType;
     }
@@ -165,14 +132,24 @@ public class ProjectEntity {
 
     @Override
     public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
+        if (this == o) {
+            return true;
+        }
+        if (o == null || getClass() != o.getClass()) {
+            return false;
+        }
 
         ProjectEntity that = (ProjectEntity) o;
 
-        if (!id.equals(that.id)) return false;
-        if (projectName != null ? !projectName.equals(that.projectName) : that.projectName != null) return false;
-        if (projectDesc != null ? !projectDesc.equals(that.projectDesc) : that.projectDesc != null) return false;
+        if (!id.equals(that.id)) {
+            return false;
+        }
+        if (projectName != null ? !projectName.equals(that.projectName) : that.projectName != null) {
+            return false;
+        }
+        if (projectDesc != null ? !projectDesc.equals(that.projectDesc) : that.projectDesc != null) {
+            return false;
+        }
         return nameGroupEntities != null ? nameGroupEntities.equals(that.nameGroupEntities) : that.nameGroupEntities
                 == null;
     }
@@ -182,7 +159,6 @@ public class ProjectEntity {
         int result = id.hashCode();
         result = 31 * result + (projectName != null ? projectName.hashCode() : 0);
         result = 31 * result + (projectDesc != null ? projectDesc.hashCode() : 0);
-//        result = 31 * result + (nameGroupEntities != null ? nameGroupEntities.hashCode() : 0);
         return result;
     }
 
@@ -192,10 +168,8 @@ public class ProjectEntity {
                 "id='" + (id == null ? "" : id) + '\'' +
                 ", projectName='" + projectName + '\'' +
                 ", projectDesc='" + projectDesc + '\'' +
-//                ", projectCd='" + projectTypeCd + '\'' +
                 ", createDt=" + createDt +
                 ", createdBy='" + createdBy + '\'' +
-//                ", nameGroupEntities=" + nameGroupEntities +
                 '}';
     }
 

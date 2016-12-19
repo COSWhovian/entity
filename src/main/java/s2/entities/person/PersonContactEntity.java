@@ -5,8 +5,6 @@ import org.hibernate.annotations.GenericGenerator;
 
 import javax.persistence.*;
 import java.time.LocalDateTime;
-import java.util.HashSet;
-import java.util.Set;
 
 /**
  * Created by russl on 11/14/2016.
@@ -17,11 +15,15 @@ public class PersonContactEntity {
     private String id;
     private String contactDesc;
     private PersonEntity person;
+    private PersonEntity contactPerson;
+    // person_id
+    // contact_person_id
+    private LocalDateTime startEventId;
+    private LocalDateTime endEventId;
 
-
-    @ManyToOne(  fetch = FetchType.EAGER)
+    @ManyToOne(fetch = FetchType.EAGER)
     @Cascade(org.hibernate.annotations.CascadeType.SAVE_UPDATE)
-    @JoinColumn(name="person_id")
+    @JoinColumn(name = "person_id")
     public PersonEntity getPerson() {
         return person;
     }
@@ -30,9 +32,9 @@ public class PersonContactEntity {
         this.person = person;
     }
 
-    @ManyToOne(  fetch = FetchType.EAGER)
+    @ManyToOne(fetch = FetchType.EAGER)
     @Cascade(org.hibernate.annotations.CascadeType.SAVE_UPDATE)
-    @JoinColumn(name="contact_person_id")
+    @JoinColumn(name = "contact_person_id")
     public PersonEntity getContactPerson() {
         return contactPerson;
     }
@@ -41,11 +43,6 @@ public class PersonContactEntity {
         this.contactPerson = contactPerson;
     }
 
-    private PersonEntity contactPerson;
-// person_id
-    // contact_person_id
-    private LocalDateTime startEventId;
-    private LocalDateTime endEventId;
 
 
 
@@ -95,17 +92,29 @@ public class PersonContactEntity {
 
     @Override
     public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
+        if (this == o) {
+            return true;
+        }
+        if (o == null || getClass() != o.getClass()) {
+            return false;
+        }
 
         PersonContactEntity that = (PersonContactEntity) o;
 
-        if (id != null ? !id.equals(that.id) : that.id != null) return false;
-        if (contactDesc != null ? !contactDesc.equals(that.contactDesc) : that.contactDesc != null) return false;
-        if (person != null ? !person.equals(that.person) : that.person != null) return false;
+        if (id != null ? !id.equals(that.id) : that.id != null) {
+            return false;
+        }
+        if (contactDesc != null ? !contactDesc.equals(that.contactDesc) : that.contactDesc != null) {
+            return false;
+        }
+        if (person != null ? !person.equals(that.person) : that.person != null) {
+            return false;
+        }
         if (contactPerson != null ? !contactPerson.equals(that.contactPerson) : that.contactPerson != null)
             return false;
-        if (startEventId != null ? !startEventId.equals(that.startEventId) : that.startEventId != null) return false;
+        if (startEventId != null ? !startEventId.equals(that.startEventId) : that.startEventId != null) {
+            return false;
+        }
         return endEventId != null ? endEventId.equals(that.endEventId) : that.endEventId == null;
     }
 

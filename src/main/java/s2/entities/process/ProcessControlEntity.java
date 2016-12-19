@@ -1,6 +1,6 @@
 package s2.entities.process;
 
-import start.UsableBaseEntity;
+import s2.entities.common.BasicEntity;
 
 import javax.persistence.*;
 
@@ -10,7 +10,7 @@ import javax.persistence.*;
 @Entity
 @Table(name = "process_control")
 @PrimaryKeyJoinColumn(name = "id", referencedColumnName = "id")
-public class ProcessControlEntity extends UsableBaseEntity {
+public class ProcessControlEntity extends BasicEntity {
     String id;
 
 

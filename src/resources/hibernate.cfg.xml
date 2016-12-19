@@ -11,7 +11,7 @@
 <property name="show_sql">true</property>
         <mapping class="s2.entities.person.PersonEntity"/>
         <!--<mapping resource="PersonEntity.hbm.xml"/>-->
-        <mapping class="start.UsableBaseEntity" />
+        <mapping class="s2.entities.common.BasicEntity" />
         <mapping class="s2.entities.process.ProcessControlEntity" />
         <!--<mapping resource="PersonNameEntity.hbm.xml"/>-->
         <mapping class="s2.entities.person.PersonNameEntity"/>
@@ -19,6 +19,7 @@
         <mapping class="s2.entities.project.ProjectTypeEntity"/>
         <mapping class="s2.entities.project.ProjectEntity"/>
 
+        <mapping class="s2.entities.video.VideoItemEntity"/>
 
 
 
@@ -27,8 +28,8 @@
 
 
 
-        <mapping class="s2.entities.name.NameGroupEntity"/>
-        <mapping class="s2.entities.name.NameGroupMapEntity"/>
+        <mapping class="s2.entities.person.NameGroupEntity"/>
+        <mapping class="s2.entities.person.NameGroupMapEntity"/>
         <mapping class="s2.entities.person.PersonGroupEntity"/>
         <!-- DB schema will be updated if needed -->
         <!-- <property name="hbm2ddl.auto">updateProject</property> -->

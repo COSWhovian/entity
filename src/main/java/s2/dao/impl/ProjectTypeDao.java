@@ -13,18 +13,14 @@ import s2.entities.project.ProjectTypeEntity;
 public class ProjectTypeDao extends AbstractEntityDao<ProjectTypeEntity> implements EntityDao<ProjectTypeEntity,
         String> {
 
-
     public ProjectTypeDao() {
-
+        // default constructor
     }
 
-
+    @Override
     public ProjectTypeEntity findById(String projectTypeCd) {
-        ProjectTypeEntity projectTypeEntity = (ProjectTypeEntity) getCurrentSession().get(ProjectTypeEntity.class,
-                projectTypeCd);
-        return projectTypeEntity;
+        return getEntityManager().find(ProjectTypeEntity.class, projectTypeCd);
     }
-
 
     @Override
     public String getQueryString() {

@@ -24,9 +24,16 @@
         <mapping class="s2.entities.project.ProjectEntity"/>
 
 
-        <mapping class="s2.entities.name.NameGroupEntity"/>
-        <mapping class="s2.entities.name.NameGroupMapEntity"/>
+        <mapping class="s2.entities.person.NameGroupEntity"/>
+        <mapping class="s2.entities.person.NameGroupMapEntity"/>
         <mapping class="s2.entities.person.PersonGroupEntity"/>
+
+
+        <mapping class="s2.entities.person.PersonGroupEntity"/>
+
+
+
+
         <!-- DB schema will be updated if needed -->
         <!-- <property name="hbm2ddl.auto">updateProject</property> -->
     </session-factory>

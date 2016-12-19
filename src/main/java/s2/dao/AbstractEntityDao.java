@@ -1,14 +1,10 @@
 package s2.dao;
 
-import org.hibernate.Session;
-import org.hibernate.SessionFactory;
-import org.hibernate.Transaction;
-import org.hibernate.boot.MetadataSources;
-import org.hibernate.boot.registry.StandardServiceRegistry;
-import org.hibernate.boot.registry.StandardServiceRegistryBuilder;
-//import s2.project.ProjectTypeEntity;
-
+import javax.persistence.EntityManager;
+import javax.persistence.EntityManagerFactory;
+import javax.persistence.Persistence;
 import java.util.List;
+
 
 /**
  * Created by russl on 11/27/2016.
@@ -17,88 +13,70 @@ import java.util.List;
 
 public abstract class AbstractEntityDao<E> {
 
-    private Session currentSession;
-
-    private Transaction currentTransaction;
+    static EntityManagerFactory entityManagerFactory;
 
     public AbstractEntityDao() {
-
+        // default constructor
     }
 
-    public Session openCurrentSession() {
-        currentSession = getSessionFactory().openSession();
-        return currentSession;
+    static {
+        entityManagerFactory = Persistence.createEntityManagerFactory("manager1");
     }
 
-    public Session openCurrentSessionwithTransaction() {
-        currentSession = getSessionFactory().openSession();
-        currentTransaction = currentSession.beginTransaction();
-        return currentSession;
+
+    public EntityManager getEntityManager() {
+        return entityManagerFactory.createEntityManager();
     }
 
-    public void closeCurrentSession() {
-        currentSession.close();
-    }
-
-    public void closeCurrentSessionwithTransaction() {
-        currentTransaction.commit();
-        currentSession.close();
-    }
-
-    private static SessionFactory getSessionFactory() {
-        final StandardServiceRegistry registry = new StandardServiceRegistryBuilder()
-                .configure() // configures settings from hibernate.cfg.xml
-                .build();
-
-        SessionFactory
-                sessionFactory = new MetadataSources(registry).buildMetadata().buildSessionFactory();
-
-
-        return sessionFactory;
-    }
-
-    public Session getCurrentSession() {
-        return currentSession;
-    }
-
-    public void setCurrentSession(Session currentSession) {
-        this.currentSession = currentSession;
-    }
-
-    public Transaction getCurrentTransaction() {
-        return currentTransaction;
-    }
-
-    public void setCurrentTransaction(Transaction currentTransaction) {
-        this.currentTransaction = currentTransaction;
-    }
 
     public void persist(E entity) {
-        getCurrentSession().save(entity);
+        EntityManager entityManager = getEntityManager();
+        entityManager.getTransaction().begin();
+        entityManager.persist(entity);
+        entityManager.getTransaction().commit();
     }
-
 
     public void update(E entity) {
-        getCurrentSession().update(entity);
+        EntityManager entityManager = getEntityManager();
+        entityManager.getTransaction().begin();
+        entityManager.merge(entity);
+        entityManager.getTransaction().commit();
     }
 
 
-    abstract public E findById(String id);
+    public abstract E findById(String id);
 
     public void delete(E entity) {
-        getCurrentSession().delete(entity);
+        EntityManager entityManager = getEntityManager();
+        entityManager.getTransaction().begin();
+        entityManager.remove(entity);
+        entityManager.getTransaction().commit();
     }
 
 
-    abstract public String getQueryString();
+    public abstract String getQueryString();
 
     public List<E> findAll() {
-        List<E> entities = (List<E>) getCurrentSession().createQuery(getQueryString()).list();
-        return entities;
+        EntityManager entityManager = getEntityManager();
+        javax.persistence.Query query = entityManager.createQuery(getQueryString());
+
+       return (List<E>) query.getResultList();
+
+
     }
 
     public void deleteAll() {
         List<E> entities = findAll();
-        entities.forEach(e -> delete(e));
+
+        entities.forEach(entity -> {
+            EntityManager entityManager = getEntityManager();
+            entityManager.getTransaction().begin();
+            entityManager.remove(entity);
+            entityManager.getTransaction().commit();
+        });
+
+
     }
+
+
 }
