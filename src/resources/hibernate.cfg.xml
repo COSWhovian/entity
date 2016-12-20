@@ -19,7 +19,7 @@
         <mapping class="s2.entities.project.ProjectTypeEntity"/>
         <mapping class="s2.entities.project.ProjectEntity"/>
 
-        <mapping class="s2.entities.video.VideoItemEntity"/>
+        <!--<mapping class="s2.entities.video.VideoItemEntity"/>-->
 
 
 

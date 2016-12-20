@@ -1,4 +1,4 @@
-package s2.entities.simple;
+package s2.entities.video;
 
 
 import org.hibernate.annotations.GenericGenerator;
@@ -17,6 +17,7 @@ public class VideoRatingEntity {
     private String ratingTip;
 
     public VideoRatingEntity() {
+        // no-arg constructor
     }
 
     public VideoRatingEntity(String ratingName) {
@@ -71,7 +72,7 @@ public class VideoRatingEntity {
 
     @Override
     public String toString() {
-        final StringBuffer sb = new StringBuffer("VCourseEntity{");
+        final StringBuilder sb = new StringBuilder("VideoRatingEntity{");
         sb.append("ratingId='").append(ratingId).append('\'');
         sb.append(", ratingName='").append(ratingName).append('\'');
         sb.append(", ratingDesc='").append(ratingDesc).append('\'');

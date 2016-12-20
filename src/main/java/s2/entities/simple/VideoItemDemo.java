@@ -5,6 +5,8 @@ package s2.entities.simple;
  */
 
 import org.hibernate.exception.ConstraintViolationException;
+import s2.entities.video.VideoItemEntity;
+import s2.entities.video.VideoRatingEntity;
 
 import java.util.HashSet;
 import java.util.List;
@@ -17,7 +19,7 @@ import javax.persistence.Persistence;
 import javax.persistence.Query;
 
 
-public class Main {
+public class VideoItemDemo {
     public static void f0() {
         EntityManagerFactory emf = Persistence.createEntityManagerFactory("manager1");
         EntityManager entityManager = emf.createEntityManager();
@@ -59,19 +61,6 @@ public class Main {
         Set<VideoRatingEntity> courses = new HashSet<>();
 
 
-//        VideoRatingEntity c1 = new VideoRatingEntity("PG");
-//        c1.setCourseDesc("Parental Guidance advised");
-//        c1.setCourseTip("parent guidance");
-//
-//
-//        VideoRatingEntity c2 = new VideoRatingEntity("R");
-//        c2.setCourseTip("restricted");
-//        c2.setCourseDesc("Restricted");
-//
-
-//        VideoRatingEntity c1 = entityManager.find(VideoRatingEntity.class, "5e0f9732-31eb-4967-a82d-32312a9b29e8");
-//        VideoRatingEntity c2 = entityManager.find(VideoRatingEntity.class, "11e2e3cb-2060-448a-9536-601844ab474d");
-
         Query query = entityManager.createQuery("from VideoRatingEntity vr where vr.ratingName= :ratingCd");
         query.setParameter("ratingCd", "G");
         VideoRatingEntity c1 = (VideoRatingEntity) query.getSingleResult();
@@ -83,15 +72,17 @@ public class Main {
         courses.add(c1);
         courses.add(c2);
 
-        VideoItemEntity student1 = new VideoItemEntity("x3", courses);
-//        VideoItemEntity student2 = new VideoItemEntity("x2", courses);
-
+        VideoItemEntity v1 = new VideoItemEntity("Escape from New York", courses);
+        VideoItemEntity v2 = new VideoItemEntity("Escape from L.A.", courses);
+//
 
         entityManager.getTransaction().begin();
-        entityManager.persist(student1);
+        entityManager.persist(v1);
         entityManager.getTransaction().commit();
 
-
+        entityManager.getTransaction().begin();
+        entityManager.persist(v2);
+        entityManager.getTransaction().commit();
 //        entityManager.getTransaction().begin();
 //        entityManager.persist(student2);
 //        entityManager.getTransaction().commit();

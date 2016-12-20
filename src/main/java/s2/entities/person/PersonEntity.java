@@ -67,13 +67,21 @@ public class PersonEntity {
 
     @Override
     public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
+        if (this == o) {
+            return true;
+        }
+        if (o == null || getClass() != o.getClass()) {
+            return false;
+        }
 
         PersonEntity that = (PersonEntity) o;
 
-        if (!id.equals(that.id)) return false;
-        if (!personDesc.equals(that.personDesc)) return false;
+        if (!id.equals(that.id)) {
+            return false;
+        }
+        if (!personDesc.equals(that.personDesc)) {
+            return false;
+        }
         return birthdate.equals(that.birthdate);
     }
 

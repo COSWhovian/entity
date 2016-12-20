@@ -20,14 +20,15 @@ public class ProjectEntity {
 
     private String projectName;
     private String projectDesc;
-//    private String projectTypeCd;
-
+    //    private String projectTypeCd;
     private LocalDateTime createDt;
     private String createdBy;
 
     private Set<NameGroupEntity> nameGroupEntities = new HashSet<>();
 
     private ProjectTypeEntity projectType;
+
+
 
     public ProjectEntity(String id, String projectName, String projectDesc,
                          String projectType,
@@ -103,7 +104,24 @@ public class ProjectEntity {
     public void setProjectDesc(String projectDesc) {
         this.projectDesc = projectDesc;
     }
+    @Basic
+    @Column(name = "create_dt", nullable = false )
+    public LocalDateTime getCreateDt() {
+        return createDt;
+    }
 
+    public void setCreateDt(LocalDateTime createDt) {
+        this.createDt = createDt;
+    }
+    @Basic
+    @Column(name = "created_by", nullable = false, length = 40)
+    public String getCreatedBy() {
+        return createdBy;
+    }
+
+    public void setCreatedBy(String createdBy) {
+        this.createdBy = createdBy;
+    }
 
     @ManyToMany(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
     @JoinTable(name = "project_name_group_map",

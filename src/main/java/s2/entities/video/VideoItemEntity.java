@@ -1,69 +1,101 @@
 package s2.entities.video;
 
+/**
+ * Created by russl on 12/18/2016.
+ */
+
+import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
 import org.hibernate.annotations.GenericGenerator;
-import s2.entities.common.DescribedInUseEntity;
-import s2.entities.common.InUseEntity;
-import s2.entities.simple.CourseEntity;
 
 import javax.persistence.*;
 import java.util.HashSet;
 import java.util.Set;
 
-/**
- * Created by russl on 12/15/2016.
- */
 @Entity
-@Table(name = "STUDENT")
-public class VideoItemEntity   {
+@Table(name = "video_item")
+public class VideoItemEntity {
 
-    private String studentId;
-    private String studentName;
-    private Set<CourseEntity> courses = new HashSet<CourseEntity>(0);
+    /*
+    television:
+       season
+       series
+
+    movie:
+    prequel
+    sequel
+    https://en.wikipedia.org/wiki/Sequel
+    reboot
+    remake
+    companion piece
+
+
+
+    cliffhanger
+    crossover
+    film series
+    (based on) video game
+    spin-off
+    tetralogy
+    trilogy
+
+
+     */
+    private String videoId;
+    private String title;
+    private Set<VideoRatingEntity> ratings = new HashSet<>(0);
 
     public VideoItemEntity() {
+        // no-arg constructor
     }
 
-    public VideoItemEntity(String studentName) {
-        this.studentName = studentName;
+    public VideoItemEntity(String title) {
+        this.title = title;
     }
 
-    public VideoItemEntity(String studentName, Set<CourseEntity> courses) {
-        this.studentName = studentName;
-        this.courses = courses;
+    public VideoItemEntity(String title, Set<VideoRatingEntity> ratings) {
+        this.title = title;
+        this.ratings = ratings;
     }
-
-
 
 
     @GeneratedValue(generator = "uuid")
     @GenericGenerator(name = "uuid", strategy = "org.hibernate.id.UUIDGenerator")
     @Id
-    @Column(name = "STUDENT_ID", unique = true, nullable = false, length = 36)
-    public String getStudentId() {
-        return this.studentId;
+    @Column(name = "video_id", unique = true, nullable = false, length = 36)
+    public String getVideoId() {
+        return this.videoId;
     }
 
-    public void setStudentId(String studentId) {
-        this.studentId = studentId;
+    public void setVideoId(String studentId) {
+        this.videoId = studentId;
     }
 
-    @Column(name = "STUDENT_NAME", nullable = false, length = 100)
-    public String getStudentName() {
-        return this.studentName;
+    @Column(name = "title", nullable = false, length = 100)
+    public String getTitle() {
+        return this.title;
     }
 
-    public void setStudentName(String studentName) {
-        this.studentName = studentName;
+    public void setTitle(String studentName) {
+        this.title = studentName;
     }
 
-//    @ManyToMany(cascade = CascadeType.ALL)
-//    @JoinTable(name = "STUDENT_COURSE", joinColumns = { @JoinColumn(name = "STUDENT_ID") }, inverseJoinColumns = { @JoinColumn(name = "COURSE_ID") })
-//    public Set<CourseEntity> getCourses() {
-//        return this.courses;
-//    }
-//
-//    public void setCourses(Set<CourseEntity> courses) {
-//        this.courses = courses;
-//    }
+    @ManyToMany(cascade = CascadeType.PERSIST)
+    @JoinTable(name = "video_rating_map",
+            joinColumns = {@JoinColumn(name = "video_id")}, inverseJoinColumns = {@JoinColumn(name = "rating_id")})
+    public Set<VideoRatingEntity> getRatings() {
+        return this.ratings;
+    }
 
+    public void setRatings(Set<VideoRatingEntity> courses) {
+        this.ratings = courses;
+    }
+
+    @Override
+    public String toString() {
+        Gson gson = new GsonBuilder().setPrettyPrinting().create();
+      return gson.toJson(this);
+
+
+    }
 }

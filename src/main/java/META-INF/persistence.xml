@@ -17,7 +17,7 @@
         <class>s2.entities.project.ProjectTypeEntity</class>
         <class>s2.entities.project.ProjectEntity</class>
 
-        <class>s2.entities.video.VideoItemEntity</class>
+        <!--<class>s2.entities.video.VideoItemEntity</class>-->
 
         <!--<class>s2.entities.common.UsableBaseEntity</class>-->
         <class>s2.entities.person.NameGroupEntity</class>

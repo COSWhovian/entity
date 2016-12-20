@@ -1,16 +1,14 @@
 package s2.entities.video;
 
-import org.hibernate.annotations.GenericGenerator;
-import s2.entities.common.DescribedInUseEntity;
-
-import javax.persistence.*;
+import javax.persistence.Entity;
+import javax.persistence.Table;
 
 /**
  * Created by russl on 12/14/2016.
  */
-@Entity
-@Table(name = "movie", schema = "enigmabase")
-public class MovieEntity extends VideoItemEntity {
+//@Entity
+//@Table(name = "movie", schema = "enigmabase")
+public class MovieEntity {
     /*
         would include "made-for-tv" movie
     */
