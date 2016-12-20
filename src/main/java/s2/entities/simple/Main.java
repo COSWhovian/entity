@@ -7,7 +7,9 @@ package s2.entities.simple;
 import org.hibernate.exception.ConstraintViolationException;
 
 import java.util.HashSet;
+import java.util.List;
 import java.util.Set;
+import java.util.stream.Collectors;
 
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
@@ -76,13 +78,13 @@ public class Main {
 
         Query query2 = entityManager.createQuery("from VideoRatingEntity vr where vr.ratingName= :ratingCd");
         query2.setParameter("ratingCd", "UR");
-        VideoRatingEntity c2 = (VideoRatingEntity) query.getSingleResult();
+        VideoRatingEntity c2 = (VideoRatingEntity) query2.getSingleResult();
 
         courses.add(c1);
         courses.add(c2);
 
-        VideoItemEntity student1 = new VideoItemEntity("x1", courses);
-        VideoItemEntity student2 = new VideoItemEntity("x2", courses);
+        VideoItemEntity student1 = new VideoItemEntity("x3", courses);
+//        VideoItemEntity student2 = new VideoItemEntity("x2", courses);
 
 
         entityManager.getTransaction().begin();
@@ -90,9 +92,9 @@ public class Main {
         entityManager.getTransaction().commit();
 
 
-        entityManager.getTransaction().begin();
-        entityManager.persist(student2);
-        entityManager.getTransaction().commit();
+//        entityManager.getTransaction().begin();
+//        entityManager.persist(student2);
+//        entityManager.getTransaction().commit();
 
 
         System.out.println(" done ");
@@ -103,8 +105,8 @@ public class Main {
     public static VideoRatingEntity getRatedG() {
         VideoRatingEntity vCourseEntity = new VideoRatingEntity();
         vCourseEntity.setRatingName("G");
-        vCourseEntity.setCourseTip("rated G");
-        vCourseEntity.setCourseDesc("General Audiences");
+        vCourseEntity.setRatingTip("rated G");
+        vCourseEntity.setRatingDesc("General Audiences");
 
         return vCourseEntity;
     }
@@ -112,8 +114,8 @@ public class Main {
     public static VideoRatingEntity getRatedPG() {
         VideoRatingEntity vCourseEntity = new VideoRatingEntity();
         vCourseEntity.setRatingName("PG");
-        vCourseEntity.setCourseTip("rated PG");
-        vCourseEntity.setCourseDesc("Parental Guidance Suggested");
+        vCourseEntity.setRatingTip("rated PG");
+        vCourseEntity.setRatingDesc("Parental Guidance Suggested");
 
         return vCourseEntity;
     }
@@ -121,8 +123,8 @@ public class Main {
     public static VideoRatingEntity getRatedPG13() {
         VideoRatingEntity vCourseEntity = new VideoRatingEntity();
         vCourseEntity.setRatingName("PG-13");
-        vCourseEntity.setCourseTip("rated PG-13");
-        vCourseEntity.setCourseDesc("Parents Strongly Cautioned");
+        vCourseEntity.setRatingTip("rated PG-13");
+        vCourseEntity.setRatingDesc("Parents Strongly Cautioned");
 
         return vCourseEntity;
     }
@@ -130,8 +132,8 @@ public class Main {
     public static VideoRatingEntity getRatedR() {
         VideoRatingEntity vCourseEntity = new VideoRatingEntity();
         vCourseEntity.setRatingName("R");
-        vCourseEntity.setCourseTip("rated R");
-        vCourseEntity.setCourseDesc("Restricted");
+        vCourseEntity.setRatingTip("rated R");
+        vCourseEntity.setRatingDesc("Restricted");
 
         return vCourseEntity;
     }
@@ -139,8 +141,8 @@ public class Main {
     public static VideoRatingEntity getRatedNC17() {
         VideoRatingEntity vCourseEntity = new VideoRatingEntity();
         vCourseEntity.setRatingName("NC-17");
-        vCourseEntity.setCourseTip("rated NC-17");
-        vCourseEntity.setCourseDesc("Adults Only");
+        vCourseEntity.setRatingTip("rated NC-17");
+        vCourseEntity.setRatingDesc("Adults Only");
 
         return vCourseEntity;
     }
@@ -148,8 +150,8 @@ public class Main {
     public static VideoRatingEntity getRatedX() {
         VideoRatingEntity vCourseEntity = new VideoRatingEntity();
         vCourseEntity.setRatingName("X");
-        vCourseEntity.setCourseTip("rated X");
-        vCourseEntity.setCourseDesc("Persons Under 16 Not Admitted");
+        vCourseEntity.setRatingTip("rated X");
+        vCourseEntity.setRatingDesc("Persons Under 16 Not Admitted");
 
         return vCourseEntity;
     }
@@ -157,8 +159,8 @@ public class Main {
     public static VideoRatingEntity getRatedNR() {
         VideoRatingEntity vCourseEntity = new VideoRatingEntity();
         vCourseEntity.setRatingName("NR");
-        vCourseEntity.setCourseTip("rated NR");
-        vCourseEntity.setCourseDesc("Not Rated");
+        vCourseEntity.setRatingTip("rated NR");
+        vCourseEntity.setRatingDesc("Not Rated");
 
         return vCourseEntity;
     }
@@ -166,8 +168,8 @@ public class Main {
     public static VideoRatingEntity getRatedUR() {
         VideoRatingEntity vCourseEntity = new VideoRatingEntity();
         vCourseEntity.setRatingName("UR");
-        vCourseEntity.setCourseTip("unrated");
-        vCourseEntity.setCourseDesc("Unrated");
+        vCourseEntity.setRatingTip("unrated");
+        vCourseEntity.setRatingDesc("Unrated");
 
         return vCourseEntity;
     }
@@ -176,6 +178,10 @@ public class Main {
 
         EntityManagerFactory emf = Persistence.createEntityManagerFactory("manager1");
         EntityManager entityManager = emf.createEntityManager();
+
+        Query query = entityManager.createQuery("from VideoRatingEntity");
+        List<VideoRatingEntity> resultList = query.getResultList();
+
 
 
         Set<VideoRatingEntity> ratingsList = new HashSet<>();
@@ -189,9 +195,14 @@ public class Main {
         ratingsList.add(getRatedNR());
         ratingsList.add(getRatedUR());
 
+        List<VideoRatingEntity> collect = ratingsList.stream().filter(x -> !resultList.stream().filter(r -> r
+                .getRatingName().equals(x.getRatingName()
+        )).findFirst().isPresent()).collect(Collectors.toList());
 
-//
-        ratingsList.forEach(e -> {
+        collect.forEach( c -> System.out.println(" need to create:  " + c ));
+
+
+        collect.forEach(e -> {
             try {
                 entityManager.getTransaction().begin();
                 entityManager.persist(e);
@@ -202,7 +213,6 @@ public class Main {
 
 
             } catch (Exception ex) {
-//    System.out.println( " *** Exception:  " + ex.getLocalizedMessage());
                 System.out.println(" --> rating already exists:  " + e.getRatingName());
 
 

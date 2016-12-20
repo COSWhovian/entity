@@ -13,8 +13,8 @@ public class VideoRatingEntity {
     private String ratingName;
 
 
-    private String courseDesc;
-    private String courseTip;
+    private String ratingDesc;
+    private String ratingTip;
 
     public VideoRatingEntity() {
     }
@@ -32,41 +32,41 @@ public class VideoRatingEntity {
         return this.ratingId;
     }
 
-    public void setRatingId(String courseId) {
-        this.ratingId = courseId;
+    public void setRatingId(String ratingId) {
+        this.ratingId = ratingId;
     }
 
-    @Column(name="COURSE_NAME", nullable=false)
+    @Column(name="rating_name", nullable=false)
     public String getRatingName() {
         return this.ratingName;
     }
 
-    public void setRatingName(String courseName) {
-        this.ratingName = courseName;
+    public void setRatingName(String ratingName) {
+        this.ratingName = ratingName;
     }
 
 
 
 
-    @Column(name="course_desc", nullable=false)
-    public String getCourseDesc() {
-        return this.courseDesc;
+    @Column(name="rating_desc", nullable=false)
+    public String getRatingDesc() {
+        return this.ratingDesc;
     }
 
-    public void setCourseDesc(String courseDesc) {
-        this.courseDesc = courseDesc;
+    public void setRatingDesc(String ratingDesc) {
+        this.ratingDesc = ratingDesc;
     }
 
 
 
 
-    @Column(name="course_tip", nullable=false)
-    public String getCourseTip() {
-        return this.courseTip;
+    @Column(name="rating_tip", nullable=false)
+    public String getRatingTip() {
+        return this.ratingTip;
     }
 
-    public void setCourseTip(String courseTip) {
-        this.courseTip = courseTip;
+    public void setRatingTip(String ratingTip) {
+        this.ratingTip = ratingTip;
     }
 
     @Override
@@ -74,8 +74,8 @@ public class VideoRatingEntity {
         final StringBuffer sb = new StringBuffer("VCourseEntity{");
         sb.append("ratingId='").append(ratingId).append('\'');
         sb.append(", ratingName='").append(ratingName).append('\'');
-        sb.append(", courseDesc='").append(courseDesc).append('\'');
-        sb.append(", courseTip='").append(courseTip).append('\'');
+        sb.append(", ratingDesc='").append(ratingDesc).append('\'');
+        sb.append(", ratingTip='").append(ratingTip).append('\'');
         sb.append('}');
         return sb.toString();
     }

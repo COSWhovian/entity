@@ -16,53 +16,53 @@ import java.util.Set;
 @Table(name = "video_item")
 public class VideoItemEntity {
 
-    private String studentId;
-    private String studentName;
-    private Set<VideoRatingEntity> courses = new HashSet<>(0);
+    private String videoId;
+    private String title;
+    private Set<VideoRatingEntity> ratings = new HashSet<>(0);
 
     public VideoItemEntity() {
     }
 
-    public VideoItemEntity(String studentName) {
-        this.studentName = studentName;
+    public VideoItemEntity(String title) {
+        this.title = title;
     }
 
-    public VideoItemEntity(String studentName, Set<VideoRatingEntity> courses) {
-        this.studentName = studentName;
-        this.courses = courses;
+    public VideoItemEntity(String title, Set<VideoRatingEntity> ratings) {
+        this.title = title;
+        this.ratings = ratings;
     }
 
 
     @GeneratedValue(generator = "uuid")
     @GenericGenerator(name = "uuid", strategy = "org.hibernate.id.UUIDGenerator")
     @Id
-    @Column(name = "item_id", unique = true, nullable = false, length = 36)
-    public String getStudentId() {
-        return this.studentId;
+    @Column(name = "video_id", unique = true, nullable = false, length = 36)
+    public String getVideoId() {
+        return this.videoId;
     }
 
-    public void setStudentId(String studentId) {
-        this.studentId = studentId;
+    public void setVideoId(String studentId) {
+        this.videoId = studentId;
     }
 
     @Column(name = "title", nullable = false, length = 100)
-    public String getStudentName() {
-        return this.studentName;
+    public String getTitle() {
+        return this.title;
     }
 
-    public void setStudentName(String studentName) {
-        this.studentName = studentName;
+    public void setTitle(String studentName) {
+        this.title = studentName;
     }
 
     @ManyToMany(cascade = CascadeType.PERSIST)
-    @JoinTable(name = "STUDENT_COURSE",
-            joinColumns = {@JoinColumn(name = "item_id")}, inverseJoinColumns = {@JoinColumn(name = "rating_id")})
-    public Set<VideoRatingEntity> getCourses() {
-        return this.courses;
+    @JoinTable(name = "video_rating_map",
+            joinColumns = {@JoinColumn(name = "video_id")}, inverseJoinColumns = {@JoinColumn(name = "rating_id")})
+    public Set<VideoRatingEntity> getRatings() {
+        return this.ratings;
     }
 
-    public void setCourses(Set<VideoRatingEntity> courses) {
-        this.courses = courses;
+    public void setRatings(Set<VideoRatingEntity> courses) {
+        this.ratings = courses;
     }
 
     @Override
