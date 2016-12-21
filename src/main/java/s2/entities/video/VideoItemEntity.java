@@ -43,6 +43,7 @@ public class VideoItemEntity {
      */
     private String videoId;
     private String title;
+
     private Set<VideoRatingEntity> ratings = new HashSet<>(0);
 
     public VideoItemEntity() {

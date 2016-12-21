@@ -1,6 +1,7 @@
 package s2.entities.video;
 
 import org.hibernate.annotations.GenericGenerator;
+import s2.entities.simple.WombatEntity;
 
 import javax.persistence.*;
 import java.util.HashSet;
@@ -14,8 +15,8 @@ import java.util.Set;
 public class VideoGroupEntity {
     // grouping of one or more video items
     String id;
-String title;
-String group_desc;
+    String title;
+    String groupDesc;
     Set<VideoItemEntity> videoItemEntities = new HashSet<>();
 
     @Column(name = "title", nullable = false, length = 256)
@@ -28,14 +29,13 @@ String group_desc;
     }
 
     @Column(name = "group_desc", nullable = false, length = 256)
-    public String getGroup_desc() {
-        return group_desc;
+    public String getGroupDesc() {
+        return groupDesc;
     }
 
-    public void setGroup_desc(String group_desc) {
-        this.group_desc = group_desc;
+    public void setGroupDesc(String group_desc) {
+        this.groupDesc = group_desc;
     }
-
 
 
     //
@@ -51,8 +51,18 @@ String group_desc;
         this.id = id;
     }
 
+    private  Set<WombatEntity> wombats;
 
-    @ManyToMany(fetch = FetchType.LAZY, cascade = CascadeType.PERSIST)
+    @OneToMany(mappedBy = "groupEntity", fetch = FetchType.EAGER)
+    public Set<WombatEntity> getWombats() {
+        return wombats;
+    }
+
+    public void setWombats(Set<WombatEntity> wombats) {
+        this.wombats = wombats;
+    }
+
+    @ManyToMany(fetch = FetchType.EAGER, cascade = CascadeType.PERSIST)
     @JoinTable(name = "video_group_map",
             joinColumns = {@JoinColumn(name = "group_id", nullable = false,
                     updatable = false)},
@@ -65,4 +75,24 @@ String group_desc;
     public void setVideoItemEntities(Set<VideoItemEntity> videoItemEntities) {
         this.videoItemEntities = videoItemEntities;
     }
+
+    @Override
+    public String toString() {
+        final StringBuilder sb = new StringBuilder("VideoGroupEntity{");
+        sb.append("id='").append(id).append('\'');
+        sb.append(", title='").append(title).append('\'');
+        sb.append(", group_desc='").append(groupDesc).append('\'');
+//        sb.append(", videoItemEntities=").append(videoItemEntities);
+//        sb.append(", wombats=").append(wombats);
+        sb.append('}');
+        return sb.toString();
+    }
+//    @Override
+//    public String toString() {
+//        Gson gson = new GsonBuilder().setPrettyPrinting().create();
+//        return gson.toJson(this);
+//
+//
+//    }
+
 }

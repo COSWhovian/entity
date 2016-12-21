@@ -72,8 +72,9 @@ public class VideoItemDemo {
         courses.add(c1);
         courses.add(c2);
 
-        VideoItemEntity v1 = new VideoItemEntity("Escape from New York", courses);
-        VideoItemEntity v2 = new VideoItemEntity("Escape from L.A.", courses);
+        VideoItemEntity v1 = new VideoItemEntity("Escape from New York c", courses);
+
+        VideoItemEntity v2 = new VideoItemEntity("Escape from L.A. c", courses);
 //
 
         entityManager.getTransaction().begin();
